@@ -84,7 +84,7 @@ body {
   transition: max-height 0.45s ease;
   will-change: max-height;
   cursor: pointer;
-  background-image: url("snoopy flower.png");
+  background-image: url("public/img/snoopy\ flower.png");
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 0;
@@ -93,7 +93,7 @@ body {
 #letter.open {
   transform: scaleY(1);
   max-height: 810px;
-  background-size: 180px;
+  background-size: 200px;
 }
 
 
@@ -194,7 +194,7 @@ body {
   font-size: 16px;
   resize: none;
 
-  background-image: url("snoopy\ backroun.png");
+  background-image: url('public/img/snoopy\ backroun.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
@@ -255,11 +255,16 @@ body {
   position: fixed;
   bottom: -80px;
   width: 80px;
-  animation: floatUp 2s linear infinite;
+  animation: floatUp 8s linear infinite;
   z-index: 0;
   opacity: 0.95;
 }
 
+.fly-wrapper {
+position: fixed;
+top: -60px;
+pointer-events: none;
+}
 
 @keyframes floatUp {
   0% {

@@ -22,37 +22,19 @@ letterBtn.addEventListener('click', () => {
   }
 });
 
-// Music click play/pause + add 🎵 icon
-document.querySelectorAll('.music-item').forEach(item => {
-  const audio = item.querySelector('audio');
-  const title = item.querySelector('p');
-
-  // Tambah ikon 🎵 di depan judul jika belum ada
-  if (!title.textContent.startsWith('🎵')) {
-    title.textContent = '🎵 ' + title.textContent;
-  }
-
-  item.addEventListener('click', () => {
-    if (audio.paused) {
-      document.querySelectorAll('audio').forEach(a => a.pause());
-      audio.play();
-      item.classList.add('playing');
-    } else {
-      audio.pause();
-      item.classList.remove('playing');
-    }
-  });
-});
 
 function createLove() {
   const wrapper = document.createElement('div');
+wrapper.className = 'fly-wrapper';
 
   if (Math.random() < 0.25) {
     const img = document.createElement('img');
-    img.src = 'snoopy pilot.png';
+    img.src = 'public/img/snoopy-pilot.png';
     img.className = 'snoopy-fly';
     img.style.left = Math.random() * 100 + 'vw';
     img.style.animationDuration = 6 + Math.random() * 4 + 's';
+    img.onload = () => console.log('PNG OK');
+    img.onerror = () => console.log('PNG ERROR');
     wrapper.appendChild(img);
   } else {
     wrapper.className = 'love';
@@ -60,6 +42,8 @@ function createLove() {
     wrapper.style.left = Math.random() * 100 + 'vw';
     wrapper.style.fontSize = Math.random() * 20 + 10 + 'px';
   }
+
+  
 
   document.body.appendChild(wrapper);
   setTimeout(() => wrapper.remove(), 9000);
@@ -122,3 +106,24 @@ if (snoopyCorner) {
   });
 }
 
+// Music click play/pause + add 🎵 icon
+document.querySelectorAll('.music-item').forEach(item => {
+  const audio = item.querySelector('audio');
+  const title = item.querySelector('p');
+
+  // Tambah ikon 🎵 di depan judul jika belum ada
+  if (!title.textContent.startsWith('🎵')) {
+    title.textContent = '🎵 ' + title.textContent;
+  }
+
+  item.addEventListener('click', () => {
+    if (audio.paused) {
+      document.querySelectorAll('audio').forEach(a => a.pause());
+      audio.play();
+      item.classList.add('playing');
+    } else {
+      audio.pause();
+      item.classList.remove('playing');
+    }
+  });
+});
