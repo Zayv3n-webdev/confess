@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <title>I Have Crush on You</title>
+</head>
+<body>
+  
+
+  <div class="navbar">
+    <button class="nav-btn" onclick="showtab('letter')">💌 Letters</button>
+    <button class="nav-btn" onclick="showtab('music')">🎵 Music</button>
+    <button class="nav-btn" onclick="showtab('form')">📝 Form</button>
+  </div>
+
+  <!-- Letter Section -->
+  <div id="letter" class="content active" data-aos="fade-down" data-aos-offset="200" data-aos-once="true">
+    <h2>Click to Open👇</h2>
+    <p>Hai Cia, makasih ya udah scan barcode ini. Aku merasa beruntung bisa kenal kamu.
+       Senyum kamu manis. You’re kind, pretty, and I like your voice. Aku udah lama punya rasa sama kamu. 
+       Awalnya aku pikir ini akan bertahan sebentar, ternyata sudah hampir 3 tahun aku simpan sendiri. 
+       I never expected it to last this long. Kita memang jarang berinteraksi, tapi aku pengen banget kita bisa lebih dekat. 
+       Aku tau mungkin ke depannya kita jadi canggung, but I still want to be honest with my feelings. Kadang aku mikir, seandainya kita bisa lebih dekat dan lebih sering ngobrol.
+       Aku pengen tahu hal-hal kecil tentang kamu, seperti apa yang kamu suka dan yang nggak kamu suka, dan bisa ngajak kamu main game bareng. Tapi aku belum berani ngajak kamu ngobrol. 
+       Maaf ya suratnya aku tulis di sini, aku nggak berani ngungkapin langsung. Giveaway ini sebenarnya cuma gimmick. Aku takut ngasih langsung tanpa alasan, makanya aku pake cara ini.
+       Aku nggak punya harapan apa-apa dari pesan ini. I just want you to know how much you mean to me. Aku senang bisa kenal kamu. Aku harap suatu saat kita bisa lebih dekat,
+       tapi aku nggak maksa. Semoga setelah baca surat ini kita nggak jadi canggung. Aku lakuin semua ini tulus, jadi kamu nggak usah mikirin tentang ini. 
+       Aku cuma mau kamu jujur sama diri kamu sendiri. Kalau kamu pengen tanggepin surat ini, aku sudah siapkan form di bawah. Kalau nggak, it’s okay. 
+       Thank you for being in my life. I hope you’ll be happy, live long, achieve your dreams, and make your parents proud. You’re special to me. I have a crush on you.</p>
+       <img src="snoopy letter.png" class="snoopy-letter">
+
+  </div>
+
+  <!-- Music Section -->
+  <div id="music" class="content">
+    <div class="music-container">
+      <h2>🎵 Music for You</h2>
+      <div class="music-list">
+        <div class="music-item">
+          
+          <p>Best Part - Daniel Caesar feat. H.E.R.</p>
+          <audio>
+            <source src="Best Part _feat. H.E.R._ - Daniel Caesar.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="music-item">
+          <p>Enchanted - Taylor Swift</p>
+          <audio controls>
+            <source src="Enchanted - Taylor Swift.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="music-item">
+          <p>Fallin Love Again - Rinaldy</p>
+          <audio controls>
+            <source src="Fallin Love Again - Rinaldy.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="music-item">
+          <p>Meet Me in My Dream - Chris Andrian Yang</p>
+          <audio controls>
+            <source src="Meet Me in My Dream - Chris Andrian Yang.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="music-item">
+          <p>more than a friend - 88rising</p>
+          <audio controls>
+            <source src="more than a friend - 88rising.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="music-item">
+          <p>My Tomorrow n Forever Is You - Attic Castle</p>
+          <audio controls>
+            <source src="My Tomorrow n Forever Is You - Attic Castle.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Section -->
+  <div id="form" class="content">
+    <div class="contact-container">
+      <h2>Jawab Disini👇</h2>
+      <form id="contact-form" action="https://formspree.io/f/mgvlwopd" method="POST">
+        <div class="input-box">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p id="status-msg" class="status-msg"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+ <script>
+  AOS.init({
+    duration: 10, // dari 800 jadi 400, biar lebih cepat
+    easing: 'ease-out',
+    offset: 10, // lebih cepat muncul saat mulai scroll
+    once: true
+  });
+</script>
+</body>
+</html>
