@@ -278,3 +278,76 @@ pointer-events: none;
 }
 
 
+
+.music-img {
+  width: 190px;
+}
+
+.music-item {
+  position: relative;
+  padding: 24px 20px 20px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.music-img {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  width: 120px;
+  height: 120%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.music-item p {
+  margin-left: 70px;
+  font-weight: 600;
+}
+
+.music-item audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #000;
+  border-radius: 10px;
+}
+
+.photo-note {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #ff8fab;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.photo-note::before {
+  content: "♡ ";
+}
+
+.photo-note::after {
+  content: " ♡";
+}
+
+.photo-grid img {
+  background-image: url("public/img/love.png");
+  background-repeat: no-repeat;
+  background-size: 58px;
+  background-position: left 6px top -18px;
+}
+
+

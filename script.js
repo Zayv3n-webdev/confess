@@ -127,3 +127,21 @@ document.querySelectorAll('.music-item').forEach(item => {
     }
   });
 });
+
+// Auto play next song
+const audioList = Array.from(document.querySelectorAll('.music-item audio'));
+
+audioList.forEach((audio, index) => {
+  audio.addEventListener('ended', () => {
+    const nextIndex = index + 1;
+
+    if (audioList[nextIndex]) {
+      audioList.forEach(a => a.pause());
+      audioList[nextIndex].currentTime = 0;
+      audioList[nextIndex].play();
+
+      document.querySelectorAll('.music-item').forEach(i => i.classList.remove('playing'));
+      audioList[nextIndex].closest('.music-item').classList.add('playing');
+    }
+  });
+});
